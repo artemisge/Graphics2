@@ -10,7 +10,9 @@ using namespace std;
 
 // constantly changing angle
 GLfloat angle = 0, mult = 1;
-GLfloat a = 6, b = 110, xyz[3] = {1, 1, 1};
+
+// AEM:3374 mod 3 = 2
+GLfloat a = 8, b = 90, xyz[3] = {1, 2, 6};
 
 void myinit()
 {
@@ -84,7 +86,7 @@ void display()
 			glTranslatef(0, 0, -8*b/10);
 			
 			glRotatef(angle, xyz[0], xyz[1], xyz[2]);
-			glTranslatef(0, 0, -10); // aktina peristrofhs
+			glTranslatef(0, 0, -20); // aktina peristrofhs
 			glScalef(a/2*mult, a/2*mult, a/2*mult);
 
 			// -8*b/10 point, to see it visually
